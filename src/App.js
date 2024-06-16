@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <form className="account-book">
+      <div className="account-book__control">
+        <label>이름</label>
+        <input type="text" />
+      </div>
+      <div className="account-book__control">
+        <label>가격</label>
+        <input type="number" />
+      </div>
+      <div className="account-book__control">
+        <label>유형</label>
+        <input type="text" />
+      </div>
+      <div className="account-book__control">
+        <label>구입 날짜</label>
+        <input type="date" />
+      </div>
+      <div className="account-book__control">
+        <label>메모 </label>
+        <input type="checkbox" />
+        <label>메모작성 </label>
+        <input type="text" />
+      </div>
+      <div className="account-book__control">
+        <label>재구매의사</label>
+        <label>한다</label>
+        <input type="radio" />
+        <label>안한다</label>
+        <input type="radio" />
+      </div>
+    </form>
   );
-}
+};
 
 export default App;

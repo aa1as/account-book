@@ -30,7 +30,7 @@ const App = () => {
         <label>재구매의사</label>
         <label>한다</label>
         <input type="radio" />
-        <label>안한다</label>
+        <label>하지않는다</label>
         <input type="radio" />
       </div>
     </form>

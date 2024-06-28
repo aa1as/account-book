@@ -62,13 +62,13 @@ const ItemList = () => {
       </div>
       <div>
         <label>메모</label>
+        <input type="checkbox" />
+        <label>메모 작성</label>
         <input
           type="text"
           value={memo}
           onChange={(e) => setMemo(e.target.value)}
         />
-        <input type="checkbox" />
-        <label>메모 작성</label>
       </div>
       <div>
         <label>재구매 의사</label>

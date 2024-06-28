@@ -1,0 +1,17 @@
+.itemList {
+  padding: 4rem;
+  margin: 4rem;
+  justify-content: center;
+  border: 1px solid black;
+}
+
+.itemList div {
+}
+
+.itemList label {
+  justify-content: start;
+  padding: 10px;
+}
+
+.itemList input {
+}

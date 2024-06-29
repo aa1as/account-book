@@ -1,4 +1,4 @@
-.itemList {
+/* .itemList {
   padding: 4rem;
   margin: 4rem;
   justify-content: center;
@@ -14,4 +14,28 @@
 }
 
 .itemList input {
+} */
+
+.itemList {
+  width: 800px;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.itemList label {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.itemList input[type="text"],
+.itemList input[type="date"],
+.itemList select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }

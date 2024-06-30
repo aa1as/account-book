@@ -1,0 +1,11 @@
+.itemListContainer {
+  width: 800px;
+  padding: 30px;
+  border: 1px solid #ccc;
+}
+
+.item {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  border-bottom: none;
+}

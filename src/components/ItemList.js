@@ -9,8 +9,8 @@ const ItemList = () => {
   const [memo, setMemo] = useState("");
   const [repurchase, setRepurchase] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (event) => {
+    event.preventDefault();
     const formData = {
       name,
       price,
@@ -29,7 +29,7 @@ const ItemList = () => {
         <input
           type="text"
           value={name}
-          onChange={(e) => setName(e.target.value)}
+          onChange={(event) => setName(event.target.value)}
         />
       </div>
       <div>
@@ -37,7 +37,7 @@ const ItemList = () => {
         <input
           type="text"
           value={price}
-          onChange={(e) => setPrice(e.target.value)}
+          onChange={(event) => setPrice(event.target.value)}
         />
       </div>
       <div>
@@ -45,7 +45,7 @@ const ItemList = () => {
         <select
           name="type"
           value={type}
-          onChange={(e) => setType(e.target.value)}
+          onChange={(event) => setType(event.target.value)}
         >
           <option value="식료품">식료품</option>
           <option value="의류">의류</option>
@@ -57,7 +57,7 @@ const ItemList = () => {
         <input
           type="date"
           value={purchaseDate}
-          onChange={(e) => setPurchaseDate(e.target.value)}
+          onChange={(event) => setPurchaseDate(event.target.value)}
         />
       </div>
       <div>
@@ -67,7 +67,7 @@ const ItemList = () => {
         <input
           type="text"
           value={memo}
-          onChange={(e) => setMemo(e.target.value)}
+          onChange={(event) => setMemo(event.target.value)}
         />
       </div>
       <div>
@@ -76,14 +76,14 @@ const ItemList = () => {
           type="radio"
           name="repurchase"
           value="한다"
-          onChange={(e) => setRepurchase(e.target.value)}
+          onChange={(event) => setRepurchase(event.target.value)}
         />
         <label>한다</label>
         <input
           type="radio"
           name="repurchase"
           value="안한다"
-          onChange={(e) => setRepurchase(e.target.value)}
+          onChange={(event) => setRepurchase(event.target.value)}
         />
         <label>안한다</label>
       </div>

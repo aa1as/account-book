@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import style from "./Item.module.css";
+import ItemFilter from "./ItemFilter";
 
 const dummyData = [
   {
@@ -76,17 +77,53 @@ const dummyData = [
 
 const Item = () => {
   const [items, setItems] = useState(dummyData);
+  const [filteredItems, setFilteredItems] = useState(dummyData);
+
+  const handleFilterChange = (filter) => {
+    let filtered = items;
+
+    if (filter.filterType) {
+      filtered = filtered.filter((item) => item.type === filter.filterType);
+    }
+
+    if (filter.startDate) {
+      filtered = filtered.filter(
+        (item) => new Date(item.purchaseDate) >= new Date(filter.startDate)
+      );
+    }
+
+    if (filter.endDate) {
+      filtered = filtered.filter(
+        (item) => new Date(item.purchaseDate) <= new Date(filter.endDate)
+      );
+    }
+
+    if (filter.sortOrder) {
+      if (filter.sortOrder === "price") {
+        filtered = filtered.sort((a, b) => a.price - b.price);
+      } else if (filter.sortOrder === "date") {
+        filtered = filtered.sort(
+          (a, b) => new Date(a.purchaseDate) - new Date(b.purchaseDate)
+        );
+      }
+    }
+
+    setFilteredItems(filtered);
+  };
 
   return (
-    <div className={style.itemListContainer}>
-      {items.map((item) => (
-        <div key={item.id} className={style.item}>
-          <h3>{item.name}</h3>
-          <p>유형: {item.type}</p>
-          <p>가격: {item.price}원</p>
-          <p>구입 날짜: {item.purchaseDate}</p>
-        </div>
-      ))}
+    <div>
+      <ItemFilter onFilterChange={handleFilterChange} />
+      <div className={style.itemListContainer}>
+        {filteredItems.map((item) => (
+          <div key={item.id} className={style.item}>
+            <h3>{item.name}</h3>
+            <p>유형: {item.type}</p>
+            <p>가격: {item.price}원</p>
+            <p>구입 날짜: {item.purchaseDate}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

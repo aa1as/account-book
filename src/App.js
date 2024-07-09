@@ -8,7 +8,6 @@ const App = () => {
   return (
     <div>
       <ItemList />
-      <ItemFilter />
       <Item />
     </div>
   );

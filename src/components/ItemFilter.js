@@ -13,7 +13,7 @@ const ItemFilter = () => {
           <label>유형 필터</label>
           <select
             value={filterType}
-            onChange={(e) => setFilterType(e.target.value)}
+            onChange={(event) => setFilterType(event.target.value)}
           >
             <option value="">전체</option>
             <option value="식료품">식료품</option>
@@ -25,7 +25,7 @@ const ItemFilter = () => {
           <label>정렬 기준</label>
           <select
             value={sortOrder}
-            onChange={(e) => setSortOrder(e.target.value)}
+            onChange={(event) => setSortOrder(event.target.value)}
           >
             <option value="">선택</option>
             <option value="price">가격</option>
@@ -37,7 +37,7 @@ const ItemFilter = () => {
           <input
             type="date"
             value={startDate}
-            onChange={(e) => setStartDate(e.target.value)}
+            onChange={(event) => setStartDate(event.target.value)}
           />
         </div>
         <div>
@@ -45,7 +45,7 @@ const ItemFilter = () => {
           <input
             type="date"
             value={endDate}
-            onChange={(e) => setEndDate(e.target.value)}
+            onChange={(event) => setEndDate(event.target.value)}
           />
         </div>
       </div>

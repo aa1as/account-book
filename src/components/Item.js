@@ -73,6 +73,13 @@ const dummyData = [
     price: 1000000,
     purchaseDate: "2024-03-25",
   },
+  {
+    id: 11,
+    name: "냉장고",
+    type: "가전제품",
+    price: 1000000,
+    purchaseDate: "2024-03-25",
+  },
 ];
 
 const Item = () => {
